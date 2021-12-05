@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 import com.qa.driver.DriverManager;
 import com.qa.enums.WaitStrategy;
+import com.qa.pages.BasePage;
 
 public class HomePage extends BasePage{
 

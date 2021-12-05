@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.tests.WeatherShopperTest" hash-for-method="weatherShopping1">weatherShopping1</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.tests.WeatherShopperTest" hash-for-method="weatherShopping1(edge)">weatherShopping1(edge)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,9 +127,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="weatherShopping1">
-                  </a> <!-- weatherShopping1 -->
+                  <a name="weatherShopping1(edge)">
+                  </a> <!-- weatherShopping1(edge) -->
                   <span class="method-name">weatherShopping1</span>
+                  <span class="parameters">(edge)</span>
                   <em>
 (Validate user is able to do end to end shopping flow either for moisturizers or sunscreens based on the current temperature)                  </em>
                 </div> <!-- method-content -->
@@ -147,6 +148,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;3&quot; name=&quot;Test&quot; parallel=&quot;methods&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.tests.WeatherShopperTest&quot;&gt;
         &lt;methods&gt;
@@ -196,12 +198,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'weatherShopping1')
 data.setCell(0, 2, 'com.qa.tests.WeatherShopperTest')
-data.setCell(0, 3, 14688);
+data.setCell(0, 3, 15154);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -229,20 +231,21 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.WeatherShopperTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup</span>
+                <span class="method-name">setup([edge])</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">weatherShopping1</span>
-                <span class="method-start">7020 ms</span>
+                <span class="method-name">weatherShopping1(edge)</span>
+                <span class="method-start">7587 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">21711 ms</span>
+                <span class="method-start">22749 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
     </div> <!-- wrapper -->
   </body>
 <script type="text/javascript" src="testng-reports2.js"></script>
