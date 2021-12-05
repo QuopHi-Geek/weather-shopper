@@ -7,6 +7,7 @@ import com.qa.driver.DriverManager;
 import com.qa.enums.WaitStrategy;
 import com.qa.factories.ExplicitWaitFactory;
 
+// This class contains methods for common actions which can be used across all the pages. All the page classes extends this class.
 public class BasePage {
 	
 	protected BasePage() {}

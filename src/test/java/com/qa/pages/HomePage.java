@@ -4,8 +4,9 @@ import org.openqa.selenium.By;
 
 import com.qa.driver.DriverManager;
 import com.qa.enums.WaitStrategy;
+import com.qa.pages.BasePage;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
 
 	private final static By textTemperature = By.id("temperature");
@@ -30,5 +31,11 @@ public class HomePage extends BasePage{
 		} else {
 			System.out.println("Shopping is not required");
 		}
+	}
+
+	// This method decides whether to shop moisturizer or Sunscreen based on the current temperature and then clicks on the appropriate button
+	public static void maximizeWindow() {
+		DriverManager.getDriver()
+				.manage().window().maximize();
 	}
 }
