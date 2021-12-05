@@ -31,4 +31,10 @@ public class HomePage extends BasePage{
 			System.out.println("Shopping is not required");
 		}
 	}
+
+	// This method maximizes window
+	public static void maximizeWindow() {
+		DriverManager.
+				getDriver().manage().window().maximize();
+	}
 }
