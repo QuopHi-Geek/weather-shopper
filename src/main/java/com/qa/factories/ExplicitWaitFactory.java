@@ -9,6 +9,7 @@ import com.qa.constants.Constants;
 import com.qa.driver.DriverManager;
 import com.qa.enums.WaitStrategy;
 
+// This class does the implementation of all the wait strategies which user may need before performing any actions on web elements.
 public class ExplicitWaitFactory {
 	
 	private ExplicitWaitFactory() {}

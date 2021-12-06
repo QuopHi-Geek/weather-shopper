@@ -13,8 +13,10 @@ public class BaseTest {
 	}
 
 	@BeforeMethod
-	protected void setup() throws Exception {	
-		DriverOperations.initDriver();
+	protected void setup(Object[] parameters) throws Exception {
+		// We are taking the parameter sent to test method from testng xml in below line of code
+		String browser = parameters[0].toString() ;
+		DriverOperations.initDriver(browser);
 	}
 	
 	@AfterMethod

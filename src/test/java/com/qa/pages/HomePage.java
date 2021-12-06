@@ -4,8 +4,9 @@ import org.openqa.selenium.By;
 
 import com.qa.driver.DriverManager;
 import com.qa.enums.WaitStrategy;
+import com.qa.pages.BasePage;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
 
 	private final static By textTemperature = By.id("temperature");
@@ -31,7 +32,7 @@ public class HomePage extends BasePage{
 			System.out.println("Shopping is not required");
 		}
 	}
-
+  
 	// This method maximizes window
 	public static void maximizeWindow() {
 		DriverManager.
