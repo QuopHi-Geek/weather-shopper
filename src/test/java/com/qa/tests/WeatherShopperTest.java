@@ -20,7 +20,9 @@ public class WeatherShopperTest extends BaseTest{
 
 	@Parameters({"browser"})
 	@Test(description = "Validate user is able to do end to end shopping flow either for moisturizers or sunscreens based on the current temperature")
+
 	public  void weatherShopping1(String browser) throws Exception {
+    
 		HomePage.maximizeWindow();
 
 		HomePage.startShopping();
@@ -41,8 +43,11 @@ public class WeatherShopperTest extends BaseTest{
 
 		ProductPage.clickOnCart();
 
-		Assert.assertEquals(list, CheckoutPage.getPriceMapOfProducts(),"Validate name and corresponding price of each and every product in checkout page with respect to the price displayed in previous page");
-		Assert.assertEquals(CheckoutPage.getTotalPrice(),CheckoutPage.sumOfAllPrices(),"Validate if total price and sum of prices of all the producs is same");
+    
+		Assert.assertEquals(list, CheckoutPage.getPriceMapOfProducts(),
+				"Validate name and corresponding price of each and every product in checkout page with respect to the price displayed in previous page");
+		Assert.assertEquals(CheckoutPage.getTotalPrice(),CheckoutPage.sumOfAllPrices(),
+				"Validate if total price and sum of prices of all the products is same");
 		
 		CheckoutPage.clickOnPayWithCard();
 

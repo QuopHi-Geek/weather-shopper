@@ -32,10 +32,10 @@ public class HomePage extends BasePage {
 			System.out.println("Shopping is not required");
 		}
 	}
-
-	// This method decides whether to shop moisturizer or Sunscreen based on the current temperature and then clicks on the appropriate button
+  
+	// This method maximizes window
 	public static void maximizeWindow() {
-		DriverManager.getDriver()
-				.manage().window().maximize();
+		DriverManager.
+				getDriver().manage().window().maximize();
 	}
 }
