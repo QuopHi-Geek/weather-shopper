@@ -14,3 +14,5 @@ src/main/java - Page objects and test files etc.
 com.qa.constants Constants.java - This class contains constants which are used across framework and will never change. In our case, we are storing path of config.properties and explicit wait time.
 
 com.qa.driver DriverManager.java - This class provides thread safety to the static variable (driver) so that parallel test execution can be done without any issues. DriverOperations.java - This class contains implementation of initDriver and quitDriver methods. Through these methods, we are initializing the driver with Browser drivers and then launching the URL.
+
+WeatherShopper_Manual_Testcase - Gherkin E2E test case for Weather Shopping
