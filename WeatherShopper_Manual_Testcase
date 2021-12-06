@@ -1,0 +1,48 @@
+Feature: User shops for Moisturizer
+
+Scenario: Current temperature is less (<) 19 Degrees Celcius
+  Given The temperature is 6
+  And Buy Moisturizer button is present and clickable
+  When User clicks on 'Buy Moisturizer' button
+  And User is redirected to the Moisturizer shop page
+  But User should see Moisturizer title on page
+  When User select to cart the least expensive mositurizer that contains Aloe
+  When select to cart the least expensive mositurizer that contains almond
+  Then Cart should show selected items
+  When User click on cart
+  But User should see Checkout page
+  Given List and total of items shopped in Rupees (Rs currency)
+  But Pay with card button should display and clickable
+  And User enters card details email , card number , expiry and CVC
+  When User clicks on pay button
+  And Transaction is successful
+  Then User should see Your payment was successful. You should receive a follow-up call from our sales team
+
+
+
+  Feature: User shops for Sunscreaens
+
+    Scenario: Current temperature is greater than (>) 34 Degrees Celcius
+      Given The temperature is 36
+      And Buy Sunscreens button is present and clickable
+      When User clicks on 'Buy Sunscreens' button
+      And User is redirected to the Sunscreens shop page
+      But User should see Sunscreens title on page
+      When User select to cart the least expensive sunscreen that is SPF-50
+      When User select to cart the least expensive sunscreen that is SPF-30
+      Then Cart should show selected items
+      When User click on cart
+      But User should see Checkout page
+      Given List and total of items shopped in Rupees (Rs currency)
+      But Pay with card button should display and clickable
+      And User enters card details email , card number , expiry and CVC
+      When User clicks on pay button
+      And Transastion is successful
+      Then User should see Your payment was successful. You should receive a follow-up call from our sales team
+
+
+    Feature: User shops for Sunscreens or Moisturizer
+
+      Scenario: Current tempertature is NOT less than 19 and NOT greater than 34
+        Given The temperature is 27
+        Then Shopping is not required
